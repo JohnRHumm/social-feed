@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import CreateNewPostForm from './Components/CreateNewPostForm/CreateNewPostForm';
+import PostFeed from './Components/PostFeed/PostFeed';
 
 function App() {
+
+  const [postData,setPostData] = useState([{id: 0, name:' ',post:' ',date: Date(),like: false,dislike: false}]);
+  
+  function AddNewPost(post){
+    let postLength = Object.keys(postData).length;
+    post.id = postLength;
+    let tempPost = [post,...postData];
+    setPostData(tempPost);
+  }
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div id='container'>
+      <nav>
+        <div id='socialFeed'>SocialFeed</div>
+      </nav>
+      <div id='createNewPostForm'> <CreateNewPostForm addNewPost = {AddNewPost}/> </div> 
+       
+      <div id='PostFeed'> <PostFeed posts = {postData}/> </div> 
     </div>
   );
 }
