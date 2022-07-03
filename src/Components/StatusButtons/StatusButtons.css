@@ -1,0 +1,12 @@
+img {
+    height: 20px;
+    width:20px;
+}
+
+.inactive {
+    background-color: gray;
+}
+
+.active {
+    background-color: lightblue;
+}

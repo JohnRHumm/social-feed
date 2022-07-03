@@ -1,11 +1,11 @@
-
-import likeImage from "./thumbsUp.png";
-import dislikeImage from "./thumbsDown.png";
+import React from "react";
+import likeImage from "../../Assets/thumbsUp.png";
+import dislikeImage from "../../Assets/thumbsDown.png";
+import StatusButtons from "../StatusButtons/StatusButtons";
 
 const PostFeed = ({posts}) => {
     
-  
-    return (  
+     return (  
         <div id='container'>
             {posts.map((post,index) => {
                if (post.id >0) {
@@ -14,8 +14,8 @@ const PostFeed = ({posts}) => {
                         <p id='name'>{post.name}</p>
                         <p id='post'>{post.post}</p>
                         <p id='date'>{post.date}</p>
-                        <button type='button' name='like' id='like'><img src={likeImage}/></button>
-                        <button type='button' name='dislike' id='dislike'><img src={dislikeImage}/></button>
+                        <StatusButtons likeImage = {likeImage} dislikeImage = {dislikeImage}/>
+                        
                     </div>
                 );}
             })}
