@@ -34,8 +34,8 @@ const StatusButton = ({likeImage,dislikeImage}) => {
     return ( 
         <div className = 'buttonContainer'>
             <button 
-                type='button' name = 'likeButton' className = {likeButtonClass} onClick = {likeClick}
-                ><img src={likeImage}/> 
+                type='button' name = 'likeButton' className = {likeButtonClass} onClick = {likeClick}>
+                <img src={likeImage}/> 
             </button>
             <button
                 type='button' name = 'dislikeButton' className = {dislikeButtonClass}  onClick = {dislikeClick}>

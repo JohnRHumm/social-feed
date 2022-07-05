@@ -18,10 +18,12 @@ function App() {
      <nav className ="navbar bg-white display-4">
         <div><strong>Social</strong>Feed</div>
     </nav>
-    <div className = 'border rounded-3 bg-light'>
+    <div className = 'border rounded-3 bg-light m-1'> 
       <div id='createNewPostForm'> <CreateNewPostForm addNewPost = {AddNewPost}/> </div> 
     </div>
-     <div id='PostFeed'> <PostFeed posts = {postData}/> </div> 
+     <div className = 'border rounded-3 bg-light m-1'> 
+      <PostFeed posts = {postData}/>
+     </div> 
        
   </div> 
   );
