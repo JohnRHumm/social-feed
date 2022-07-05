@@ -32,13 +32,13 @@ const StatusButton = ({likeImage,dislikeImage}) => {
     
     
     return ( 
-        <div class = 'buttonContainer'>
+        <div className = 'buttonContainer'>
             <button 
-                type='button' name = 'likeButton' class = {likeButtonClass} onClick = {likeClick}
+                type='button' name = 'likeButton' className = {likeButtonClass} onClick = {likeClick}
                 ><img src={likeImage}/> 
             </button>
             <button
-                type='button' name = 'dislikeButton' class = {dislikeButtonClass}  onClick = {dislikeClick}>
+                type='button' name = 'dislikeButton' className = {dislikeButtonClass}  onClick = {dislikeClick}>
                 <img src={dislikeImage}/> 
              </button>
         </div>

@@ -6,7 +6,7 @@ import StatusButtons from "../StatusButtons/StatusButtons";
 const PostFeed = ({posts}) => {
     
      return (  
-        <div id='container'>
+        <div className='container'>
             {posts.map((post,index) => {
                if (post.id >0) {
                 return (

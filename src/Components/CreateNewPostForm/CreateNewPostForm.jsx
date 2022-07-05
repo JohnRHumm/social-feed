@@ -19,7 +19,7 @@ const CreateNewPostForm = ({addNewPost}) => {
     }
         
     return (
-       <div className='mb-3 shadow bg-white rounded'>
+       <div className='shadow bg-white rounded justify-content-center m-3 p-1 b-2'>
             <form onSubmit={handleSubmit}>
                <div className = 'form-group row'>
                      <label htmlFor = "name" className = 'col-sm-1 col-form-label'>Name</label>
@@ -31,10 +31,9 @@ const CreateNewPostForm = ({addNewPost}) => {
                      <label htmlFor = "post" className = 'col-sm-1 col-form-label'>Post</label>
                      <div className = 'col-sm-8'>
                          <input type = 'text' className = 'form-control form-control-lg' id='post' name='post' value = {post} onChange = {(event)=> setPost(event.target.value)}/>
-                            
                      </div>
-                     <div className = 'col-2'>
-                        <button type='submit'>Create</button>
+                     <div className = 'col-1'>
+                        <button type='submit' className = "btn btn-primary">Create</button>
                     </div>
                 </div>
                 

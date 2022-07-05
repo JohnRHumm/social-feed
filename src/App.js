@@ -14,13 +14,13 @@ function App() {
   }
  
   return (
-  <div className='container-fluid'>
-     <nav className ="navbar bg-light">
-          SocialFeed
+  <div className ='container-fluid'>
+     <nav className ="navbar bg-white display-4">
+        <div><strong>Social</strong>Feed</div>
     </nav>
-    <div className = 'mb-3 border rounded-3 bg-info' >
+    <div className = 'border rounded-3 bg-light'>
       <div id='createNewPostForm'> <CreateNewPostForm addNewPost = {AddNewPost}/> </div> 
-     </div>
+    </div>
      <div id='PostFeed'> <PostFeed posts = {postData}/> </div> 
        
   </div> 
